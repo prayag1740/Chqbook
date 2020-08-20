@@ -182,7 +182,9 @@ class CapturePayment(APIView):
                 response = {"status": err[0], "message" : err[1]}
                 return Response(response, status=http_status.HTTP_404_NOT_FOUND)
                 
-            order_obj.status = 2
+            payment_status = response_result.get("status").lower()
+            status_map = {"captured" : 2 , "failed" : 4}
+            order_obj.status = status_map.get(payment_status)
             order_obj.save()
             wallet_id = wallet_obj.id
             payment_obj.wallet_id = wallet_id
