@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "5f3e7353-9b98-4462-8385-69df32214e3f",
+		"name": "chqbook",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "capture payment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"payment_id\" : \"pay_8912oUBi66xm2d\",\n    \"amount\" : \"1000\",\n    \"currency\" : \"INR\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8010/chqbook/api/v1/capture-payment/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8010",
+					"path": [
+						"chqbook",
+						"api",
+						"v1",
+						"capture-payment",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\" : 1000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "Create order",
+					"host": [
+						"Create order"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
